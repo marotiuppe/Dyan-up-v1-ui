@@ -1,0 +1,44 @@
+<app-login *ngIf="loadPage=='login'"></app-login>
+<div class="container-scroller" *ngIf="isLogin">
+  <!-- partial:partials/_navbar.html -->
+  <app-default-layout-navbar></app-default-layout-navbar>
+  <!-- partial -->
+  <div class="container-fluid page-body-wrapper">
+    <!-- partial:partials/_sidebar.html -->
+    <app-sidebar-offcanvas-navbar></app-sidebar-offcanvas-navbar>
+    <!-- partial -->
+    <div class="main-panel">
+      <div class="content-wrapper">
+        <app-dashboard *ngIf="loadPage=='dashboard'"></app-dashboard>
+        <app-user *ngIf="loadPage=='user'"></app-user>
+        <app-course *ngIf="loadPage=='course'"></app-course>
+        <app-content *ngIf="loadPage=='content'"></app-content>
+        <app-payment *ngIf="loadPage=='payment'"></app-payment>
+        <app-analytics *ngIf="loadPage=='analytics'"></app-analytics>
+        <app-notification *ngIf="loadPage=='notification'"></app-notification>
+      </div>
+      <!-- content-wrapper ends -->
+      <!-- partial:partials/_footer.html -->
+      <app-footer></app-footer>
+      <!-- partial -->
+    </div>
+    <!-- main-panel ends -->
+  </div>
+  <!-- page-body-wrapper ends -->
+</div>
+<!-- container-scroller -->
+
+<!-- plugins:js -->
+<script src="../assets/vendors/js/vendor.bundle.base.js"></script>
+<script src="../assets/vendors/js/vendor.bundle.addons.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.css" integrity="sha256-NAxhqDvtY0l4xn+YVa6WjAcmd94NNfttjNsDmNatFVc=" crossorigin="anonymous" />
+<!-- endinject -->
+<!-- Plugin js for this page-->
+<!-- End plugin js for this page-->
+<!-- inject:js -->
+<script src="../assets/js/off-canvas.js"></script>
+<script src="../assets/js/misc.js"></script>
+<!-- endinject -->
+<!-- Custom js for this page-->
+<script src="../assets/js/dashboard.js"></script>
+<!-- End custom js for this page-->
